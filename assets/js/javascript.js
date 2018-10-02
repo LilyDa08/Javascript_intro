@@ -309,55 +309,87 @@
 
 //////
 
-let character = {
-    nom: this.nom,
-    level: this.level,
-    life: this.life,
-    weapon: {
-        arme: this.arme,
-        damage : this.damage
-        },
-    attack: function() {
-            console.log( this.nom + " attaque " + opponentCharacter.nom);
-            console.log("avec l'arme " + this.weapon.arme);
-            console.log("et lui inflige " + this.weapon.damage + " de dégâts.");
-            console.log(opponentCharacter.nom + " a maintenant " + (opponentCharacter.life - this.weapon.damage) + " points de vie");
-        },
-    receiveDamage: function() {
-            console.log( this.nom + " est confronté à " + opponentCharacter.nom);
-            console.log("qui a l'arme " + opponentCharacter.weapon.arme);
-            console.log("il reçoit " + opponentCharacter.weapon.damage + " de dégâts.");
-            console.log(this.nom + " s'affaiblit! il n'a plus que " + (mainCharacter.life - this.weapon.damage) + " points de vie !!");
-        }
+// let character = {
+//     nom: this.nom,
+//     level: this.level,
+//     life: this.life,
+//     weapon: {
+//         arme: this.arme,
+//         damage : this.damage
+//         },
+//     attack: function(adversaire) {
+//             console.log( this.nom + " attaque " + adversaire.nom);
+//             console.log("avec l'arme " + this.weapon.arme);
+//             console.log("et lui inflige " + this.weapon.damage + " de dégâts.");
+//             console.log(adversaire.nom + " a maintenant " + (adversaire.life - this.weapon.damage) + " points de vie");
+//         },
+//     receiveDamage: function(adversaire) {
+//             console.log( this.nom + " est confronté à " + adversaire.nom);
+//             console.log("qui a l'arme " + adversaire.weapon.arme);
+//             console.log("il reçoit " + adversaire.weapon.damage + " de dégâts.");
+//             console.log(this.nom + " s'affaiblit! il n'a plus que " + (mainCharacter.life - this.weapon.damage) + " points de vie !!");
+//         }
         
-};
+// };
 
-let mainCharacter = Object.create(character);
+// let mainCharacter = Object.create(character);
 
-mainCharacter.nom = "Gil";
-mainCharacter.level = 78;
-mainCharacter.life = 95;
-mainCharacter.weapon = {
-    arme: "riot-gun", 
-    damage: 12
-}
+// mainCharacter.nom = "Gil";
+// mainCharacter.level = 78;
+// mainCharacter.life = 95;
+// mainCharacter.weapon = {
+//     arme: "riot-gun", 
+//     damage: 12
+// }
 
-let opponentCharacter = Object.create(character);
+// let opponentCharacter = Object.create(character);
 
-opponentCharacter.nom = "Korgs";
-opponentCharacter.level = 72;
-opponentCharacter.life = 92;
-opponentCharacter.weapon = {
-    arme: "m-16", 
-    damage: 14
-}
+// opponentCharacter.nom = "Korgs";
+// opponentCharacter.level = 72;
+// opponentCharacter.life = 92;
+// opponentCharacter.weapon = {
+//     arme: "m-16", 
+//     damage: 14
+// }
     
-mainCharacter.attack();
-mainCharacter.receiveDamage();
+// mainCharacter.attack(opponentCharacter);
+// mainCharacter.receiveDamage(opponentCharacter);
+
+////////////// --- EXERCICES ------ 1
+
+// var bonjour = "Good morning to you !";
+// alert(bonjour);
+
+///////
+
+// var name = "Lily";
+// var lastName ="Danhaive";
+// var city = "Bruxelles";
+// alert('nom: ' + lastName + '\n' + 'prénom: ' + name + '\n' + 'ville: ' + city);
+
+///////
+
+// var name = prompt("Quel est ton nom?");
+
+// alert( "Bonjour, " + name);
+
+/////////
+
+// var name = prompt("Quel est ton nom?");
+// var lastName =prompt("et ton nom de famille?");
+// var city = prompt("où habites-tu?");
+
+// alert('nom: ' + lastName + '\n' + 'prénom: ' + name + '\n' + 'ville: ' + city);
+
+///////////
+
+// let premierNombre = prompt("donnez-moi un nombre");
+// let deuxiemeNombre = prompt("donnez-moi encore un autre nombre"); 
+
+// alert(" le total est égal à " + (Math.round(premierNombre) * deuxiemeNombre));
 
 
-
-
+//////////  D.O.M
 
 
 
