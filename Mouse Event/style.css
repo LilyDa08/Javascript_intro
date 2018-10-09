@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(192, 233, 217);
+}
+
 .hoverMe {
     border: 1px solid black;
     background-color: red;
@@ -42,7 +46,7 @@
 }
 
 #up, #down, #left, #right{
-    border: 2px solid black;
+    border: 1px solid black;
     background-color: rgb(70, 180, 80);
     height: 150px;
     width: 100%;
@@ -51,5 +55,5 @@
 .piano {
     display: flex;
     margin: auto;
-    width: 30vw;
+    width: 15vw;
 }

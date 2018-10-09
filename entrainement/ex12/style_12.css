@@ -1,0 +1,11 @@
+div {
+    height: 10vh;
+}
+
+button {
+    color: white;
+    background-color: rgb(68, 175, 125);
+    padding: 10px;
+    margin-left: 20vh;
+    font-size: 1.2em;
+}

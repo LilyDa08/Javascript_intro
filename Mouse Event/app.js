@@ -1,12 +1,13 @@
 //// MOUSE EVENT
+
+
 function pouf() {
     this.style.opacity = 0;
 }
 let allDiv = document.querySelectorAll('.hoverMe');
 
 for (i = 0; i < allDiv.length; i++) {
-    oneDiv = allDiv[i];
-    oneDiv.addEventListener('mouseover', pouf);
+    allDiv[i].addEventListener('mouseover', pouf);
 }
 
 ///////////
@@ -32,7 +33,7 @@ function gps() {
     axeY.innerHTML = event.clientY;
 }
 
-document.addEventListener('mouseover', gps);
+document.addEventListener('mousemove', gps);
 
 ////////////  KEYBOARD
 
@@ -102,6 +103,7 @@ function pressArrow() {
             break;
     }
 };
+
 function releaseArrow() {
     switch (event.keyCode) {
         case 37:

@@ -264,7 +264,6 @@
 //     for (let i = 0; i < objects.length; i++) {
 //         for (let key in objects[i]) {
 //             console.log( key + ": " + objects[i][key]);
-       
 //         }
 //     }
 // }
@@ -280,13 +279,11 @@
 // }
 // available();
 
-// //
 // let level = function() {
 //     for ( let i = 0; i <objects.length; i++) {
 //         if ( objects[i].minLevel >= 10) {
 //             console.log(objects[i]);
 //         };
-
 //     }
 // }
 // level ();
@@ -307,7 +304,7 @@
 
 // mainCharacter.attack();
 
-//////
+/////////
 
 // let character = {
 //     nom: this.nom,
@@ -329,7 +326,6 @@
 //             console.log("il reçoit " + adversaire.weapon.damage + " de dégâts.");
 //             console.log(this.nom + " s'affaiblit! il n'a plus que " + (mainCharacter.life - this.weapon.damage) + " points de vie !!");
 //         }
-        
 // };
 
 // let mainCharacter = Object.create(character);
@@ -351,7 +347,7 @@
 //     arme: "m-16", 
 //     damage: 14
 // }
-    
+
 // mainCharacter.attack(opponentCharacter);
 // mainCharacter.receiveDamage(opponentCharacter);
 
@@ -387,10 +383,3 @@
 // let deuxiemeNombre = prompt("donnez-moi encore un autre nombre"); 
 
 // alert(" le total est égal à " + (Math.round(premierNombre) * deuxiemeNombre));
-
-
-//////////  D.O.M
-
-
-
-
