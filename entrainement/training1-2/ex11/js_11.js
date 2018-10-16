@@ -4,7 +4,7 @@ let i = 0;
 let moyenne = 0;
 let nombreIn;
 
-let calculMoyenne = function () {
+let calculMoyenne = function() {
     nombre = prompt("Entrez un nombre entier");
     nombreIn = parseFloat(nombre);
     if (Number.isInteger(nombreIn) == true) {
