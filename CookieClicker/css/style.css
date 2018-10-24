@@ -6,7 +6,6 @@ body {
 }
 
 main {
-
     width: 60vw;
     height: 100vh;
     background-color: #c9dee3;
@@ -53,7 +52,7 @@ main {
     margin: auto;
     margin-top: 15px;
     height: 30vw;
-    background-color: #815229;
+    background-color: #a36731;
     border: 1px solid black;
     border-radius: 50%;
     width: 50%;

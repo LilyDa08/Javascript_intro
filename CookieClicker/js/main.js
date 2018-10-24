@@ -1,60 +1,57 @@
 let clicDoc = document.querySelector("#clic");
 let priceZone = document.querySelector(".price");
-let cookieZone = document.querySelector(".cookie_zone");
 let affichageDoc = document.querySelector("#affichage");
 let multiZoneDoc = document.querySelector("#multiZone");
 let multiPriceDoc = document.querySelector("#multiPrice");
-let multipleDoc = document.querySelector('#multiplicateur')
-let flagMulti = true;
+let multipleDoc = document.querySelector('#multiplicateur');
 
-let minimum = 20;
 
-let score = 1;
-let multiButton = 1; // affiché sur le boutton
-let multiScore = 1; // calculé pr le score
-let totalScore = 0;
+let multiply = 1;
+let scoreFinal = 0;
+let price;
+let interval;
 
 function startGame() {
-    totalScore += score * multiScore;
 
-        if (totalScore % minimum === 0) {
-            multiButton++;
-            multiZoneDoc.innerHTML = multiButton;
-            multiPriceDoc.innerHTML = multiButton * 10;
-            console.log("1 : " + multiButton);
-            addCookie();
-     
+    document.querySelector('.cookie_zone').style.backgroundColor = '#815229';
+    wait();
+    affichageDoc.innerHTML = scoreFinal;
+    scoreFinal += multiply;
+    console.log("1 scoreFinal = " + scoreFinal);
+    if (scoreFinal > ((multiply + 1) * 10)) {
+        multiZoneDoc.innerHTML = (multiply + 1);
+        multiPriceDoc.innerHTML = "Prix = " + ((multiply + 1) * 10) + " cookies";
+        multipleDoc.style.visibility = "visible";
+        multiPriceDoc.style.visibility = "visible";
+    } else {
+        multipleDoc.style.visibility = "hidden";
+        multiPriceDoc.style.visibility = "hidden";
     }
-    // do score + the extra score
-    affichageDoc.innerHTML = totalScore;
 }
 
-function addCookie() {
-    priceZone.style.visibility = "visible";
-    multipleDoc.style.visibility = "visible";
-    console.log("2 : " + multiButton);
-    multipleDoc.addEventListener('click', increaseMultipler);
-}
-
-function increaseMultipler() {
-    if (totalScore >= (multiButton * 10)) {
-        totalScore -= (multiButton * 10);
-        console.log("3 : " + multiButton);
-        multiScore = multiButton;
-        if (totalScore < (multiButton * 10)) {
-            priceZone.style.visibility = "hidden";
-            multipleDoc.style.visibility = "hidden";
-            console.log("4 : " + multiButton);
-        }
+function clickedMultiply() {
+    multiply++;
+    price = multiply * 10;
+    scoreFinal -= price;
+    affichageDoc.innerHTML = scoreFinal;
+    console.log("2 scoreFinal = " + scoreFinal);
+    if (scoreFinal < price) {
+        multipleDoc.style.visibility = "hidden";
+        multiPriceDoc.style.visibility = "hidden";
     }
-    affichageDoc.innerHTML = totalScore;
-    console.log("5 : " + multiButton);
-    return multiScore;
+    firstStep();
 }
 
-//function refreshVisuals() {
-//
-//    affichageDoc.innerHTML = totalScore;
-//}
+function firstStep() {
+    clicDoc.addEventListener("click", startGame);
+}
 
-clicDoc.addEventListener("click", startGame);
+function wait() {
+    interval = setTimeout(function () {
+        document.querySelector('.cookie_zone').style.backgroundColor = '#a36731';
+    }, 50);
+}
+
+multipleDoc.addEventListener('click', clickedMultiply);
+
+firstStep();
